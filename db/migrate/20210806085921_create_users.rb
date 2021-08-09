@@ -6,6 +6,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :email
 
       t.timestamps
+      #created_at
+      #updated_at
     end
   end
 end

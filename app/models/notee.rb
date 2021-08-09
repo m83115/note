@@ -1,0 +1,2 @@
+class Notee < ApplicationRecord
+end

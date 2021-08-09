@@ -10,5 +10,4 @@ class PagesController < ApplicationController
         # embedded ruby
     end
 
-
 end
