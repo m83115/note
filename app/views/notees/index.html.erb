@@ -1,6 +1,9 @@
 <h1>筆記列表</h1>
 
-
-
 <%= link_to "新增筆記", new_notee_path %>
 
+<ul>
+<% @notees.each do |notee| %>
+  <li><%= link_to notee.title, notee_path(notee) %></li>
+<% end %>
+</ul>

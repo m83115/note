@@ -1,11 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+
+</style>
+<body>
+
 <h1>新增筆記</h1>
 
-
-<%= form_for(@notee) do %>
+<%= form_for(@notee) do |f| %>
   
-  標題 : <input type="text" name="notee[title]">
-  內文 : <textarea name="notee[content]"></textarea>
+  <%= f.label :title, "標題" %>
+  <%= f.text_field :title %>
+  
+  <%= f.label :content, "內文" %>
+  <%= f.text_area :content %>
+  <%= f.submit "送出" %>
 
-  <input type="submit" value="送出">
 <% end %>
+  
+</body>
+</html>
+
+
+
+
 
