@@ -4,7 +4,7 @@ class NoteesController < ApplicationController
     end
 
     def new
-        @notee = Notee.new()
+        @notee = Notee.new
     end
 
     def create
@@ -13,7 +13,7 @@ class NoteesController < ApplicationController
         notee = Notee.new(title: title, content: content)
 
         if notee.save
-            redirect_to "/notee"
+            redirect_to "/notees"
         else
         
         end
