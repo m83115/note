@@ -4,6 +4,12 @@
 
 <ul>
 <% @notees.each do |notee| %>
-  <li><%= link_to notee.title, notee_path(notee) %></li>
+  <li>
+    <%= link_to notee.title, notee_path(notee) %>
+    <%= link_to "編輯", edit_notee_path(notee) %>
+    <%= link_to "刪除", notee_path(notee), method: "delete", data: { confirm: "確定嗎?" , id: notee.id} %>
+  </li>
 <% end %>
 </ul>
+
+ 
